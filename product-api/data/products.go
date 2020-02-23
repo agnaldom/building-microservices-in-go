@@ -14,6 +14,10 @@ type Product struct {
 	DeletedOn   string
 }
 
+func GetProducts() []*Product {
+	return productList
+}
+
 var productList = []*Product{
 	&Product{
 		ID:          1,
@@ -22,7 +26,7 @@ var productList = []*Product{
 		Price:       2.45,
 		SKU:         "abc323",
 		CreatedOn:   time.Now().UTC().String(),
-		UpdatedOn:   time.Now().UTF().String(),
+		UpdatedOn:   time.Now().UTC().String(),
 	},
 	&Product{
 		ID:          2,
@@ -31,6 +35,6 @@ var productList = []*Product{
 		Price:       1.99,
 		SKU:         "fjd34",
 		CreatedOn:   time.Now().UTC().String(),
-		UpdatedOn:   time.Now().UTF().String(),
+		UpdatedOn:   time.Now().UTC().String(),
 	},
 }
